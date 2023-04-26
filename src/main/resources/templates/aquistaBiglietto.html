@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>cinema</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/styleFive.css}">
+</head>
+<body>
+	<nav th:insert="~{login :: navigazione}"></nav>
+	<h1 th:text="${titolo}">Segnaposto</h1>
+
+	<form th:action="@{/conferma}" method="post"
+		class="needs-validation buy" novalidate>
+
+		<input type="hidden" name="film" th:value="${film.id}">
+
+		<div class="form-group">
+			<label for="data">Data film</label> <input type="date" name="data"
+				class="form-control" required>
+			<div class="invalid-feedback">Inserisci una data valida</div>
+		</div>
+
+		<div class="form-group">
+			<label for="utente">Utente</label> <input type="text" name="utente"
+				class="form-control" required>
+			<div class="invalid-feedback">Inserisci un nome utente valido</div>
+		</div>
+
+		<div class="form-group">
+			<label for="posto">Numero Posto</label> <input type="number"
+				name="posto" class="form-control" required>
+			<div class="invalid-feedback">Inserisci un numero di posto
+				valido</div>
+		</div>
+
+		<div class="form-group">
+			<label for="prezzo">Prezzo</label>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">€</span>
+				</div>
+				<input type="number" name="prezzo" class="form-control" required>
+				<div class="invalid-feedback">Inserisci un prezzo valido</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-danger ">Prenota</button>
+		</div>
+
+	</form>
+	<footer th:insert="~{login :: footer}"
+		class="footer footer bg-transparent"></footer>
+</body>
+</html>

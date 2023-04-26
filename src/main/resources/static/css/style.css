@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.title{
+	text-align: center;
+	padding-left: 80px;
+	padding-right: 100px;
+ 	margin-top: 30px;
+ 	color: white;
+}
+.form{
+	text-align: center;
+	margin-top: 70px;
+	color: white;
+	margin-right: 40px;
+}
+
+body {
+	background: url(https://www.nonsolocinema.com/wp/wp-content/uploads/2004/01/cinema.jpg);
+}
+.div{
+	padding-left: 5px;
+	margin-top: 10px;
+}
+.secondDiv{
+	padding-bottom:20px; 
+}
+.buttonDiv{
+	margin-top: 15px;
+	
+}
+.buttonTwo{
+	margin-left: 70px;
+	
+}
+.buttonOne{
+	margin-left: 35px;
+}
+footer{
+	margin-top: 300px;
+}
+	

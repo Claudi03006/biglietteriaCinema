@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cinema</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/styleSecond.css}">
+</head>
+<body>
+	<nav th:insert="~{login :: navigazione}"></nav>
+	<h1 th:text="${titolo}">Segnaposto</h1>
+
+
+	<ul class="list-group ul">
+		<li th:each="film : ${films}" class="list-group-item"><a
+			th:href="@{aquistaBiglietto/}+${film.id}"
+			class="d-flex justify-content-between align-items-center"> <span
+				th:text="${film.titolo}"></span> <span
+				th:text="${film.inizio}+ ' - ' +${film.fine}"></span> <span
+				class="badge badge-primary badge-pill">Acquista</span>
+		</a></li>
+	</ul>
+
+
+
+	<footer th:insert="~{login :: footer}"
+		class="footer footer bg-transparent"></footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body {
+	background: url("https://img.freepik.com/vecteurs-libre/clap-fond-festival-cinema-bobine-film_1017-36647.jpg?w=2000");
+}
+.table{
+	width: 80%;
+	color:black;
+	margin-left: 70px;
+}
+h1 {
+	margin-left: 150px;
+}

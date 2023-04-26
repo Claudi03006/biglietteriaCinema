@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
+<link rel="stylesheet" type="text/css" href="" th:href="@{/css/styleSeven.css}">
+</head>
+<body>
+
+<h1 th:text="${titolo}">Segnaposto</h1>
+	
+	
+	<div th:object="${dati}">
+	
+		<h2 th:text="'Prenotazione di ' + *{utente}"></h2>
+		<h2 th:text="'In data ' + *{data}"></h2>
+		<h2 th:text="'Posto ' + *{posto}"></h2>
+		<h2 th:text="'Prezzo ' + *{prezzo}"></h2>
+		<h2 th:text="'Film ' + *{film.inizio} + *{film.fine}"></h2>
+	
+	
+	</div>
+
+	<div>
+		<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/56/QR_URL_itmwiki_Main_Page.svg">
+	
+	</div>
+	
+	  <footer th:insert="~{login :: footer}" class="footer footer bg-transparent"></footer>
+</body>
+</html>

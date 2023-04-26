@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>cinema</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/styleFourth.css}">
+</head>
+<body>
+	<nav th:insert="~{login :: navigazione}"></nav>
+
+	<h1 th:text="${titolo}">Segnaposto</h1>
+
+	<table class="table table-hover table table">
+		<tr>
+			<th>Id</th>
+			<th>Tratta</th>
+			<th>Utente</th>
+			<th>Posti</th>
+		</tr>
+		<tr th:each="b : ${elenco}">
+			<td th:text="${b.id}">Row 1: Col 1</td>
+			<td th:text="${b.data}">Row 1: Col 2</td>
+			<td th:text="${b.utente}">Row 1: Col 1</td>
+			<td th:text="${b.posti}">Row 1: Col 1</td>
+		</tr>
+	</table>
+	<footer th:insert="~{login :: footer}"
+		class="footer footer bg-transparent"></footer>
+
+</body>
+</html>

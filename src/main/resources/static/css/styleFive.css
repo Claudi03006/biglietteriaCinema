@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.buy{
+	margin-top: 70px;
+	color: white;
+	margin-right: 140px;
+	margin-left: 140px;
+}
+
+body {
+	background: url("https://img.freepik.com/free-vector/cinema-movie-film-festival-background_1017-23458.jpg?w=2000");
+}
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}

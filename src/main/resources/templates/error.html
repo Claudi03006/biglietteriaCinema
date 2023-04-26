@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{/css/styleSix.css}">
+
+</head>
+<body>
+	<script>
+		function goToHome() {
+			window.location.href = "/lista";
+		}
+	</script>
+	<h1>pagina di errore</h1>
+
+	<div class="position-relative">
+		<button class="btn btn-secondary centre mt-5" onclick="goToHome()">Home</button>
+	</div>
+	<footer th:insert="~{login :: footer}"
+		class="footer footer bg-transparent"></footer>
+
+</body>
+</html>
